@@ -46,14 +46,31 @@ Le format des entrées est le suivant : <br/>
 
 ![bert-ft](https://user-images.githubusercontent.com/22484369/73930902-a3b5f180-48d7-11ea-8145-b8a79f439229.png)
 
+
+
+## Dataset: SQuAD 2.0
+- Nous utilisons le dataset Squad 2.0 comportant un jeu de données de questions et de réponses associées. La grande particularité de ce dataset, et ce qui le différencie la première version de SQuAD, concerne la possibilité d'avoir une question sans réponse. Il nous faut donc à la fois trouver la position d'une réponse dans un texte lorsqu'elle existe, mais aussi ne pas donner de réponse lorsque la question n'en a pas. 
+
+- Par conséquent, de simples modèles (ex: Bert) qui performent avec plus de 85% sur SQuAD doivent être finetunés pour dépasser les 66% sur SQuADv2
+
 - Nous avons essayé deux modèles différents en Fine Tuned la dernière couche:
   - L'un avec une couche Dense classique
   - L'autre avec une couche LSTM
 
-
 ## Résultats sur le dataset SQuAD 2.0
+Pour les résultats, nous avons comparé plusieurs modèles sur plusieurs métriques, mais nous avons gardé le F1 score afin de comparer au mieux nos résultats. 
 
+- Couche Dense classique: <br/>
 
+Pour la couche Dense classique, comme nous l'avons dit précédemment, les résultats sont plus faibles sur SQuAD v2 avec un score de 66%. Cette couche n'est donc pas suffisante, nous avons donc décidé de tester d'autres modèles.
+
+- LSTM: <br/>
+
+Une idée, assez peu utilisé mais qui peut s'averer pertinente est celle des LSTM. On obtient avec cette méthode un score de ...%. 
+
+- CNN: <br/>
+
+On a voulu utiliser un CNN en sortie de Bert, plus précisément un CNN 1d, qui va prendre en entrée la concaténation des 4 dernières couches de Bert. Nous avons obtenu un score de ...% (en cours d'entrainement).
 
 ## License
 
