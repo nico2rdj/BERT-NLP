@@ -18,9 +18,9 @@
 ## Manuel d'utilisation
 
 - Se placer à la fin du jupyter notebook dans la cellule ci-dessous et mettre le paragraphe dans la variable doc et la question dans la variable q : 
-
+<p align="center">
 ![example](https://user-images.githubusercontent.com/22484369/73929430-11145300-48d5-11ea-8e14-a29becca0ff4.png)
- 
+ </p>
     
    
     
