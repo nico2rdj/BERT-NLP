@@ -25,7 +25,7 @@
     
     
 
-## Détails de l'implémentation de BERT
+## Détails de l'implémentation de BERT et XLNet
 
 
 - Pour le preprocessing, nous avons utilisé la libraire **transformers** avec la fonction **SquadV2Processor** pour récupérer les questions et réponses puis **squad_convert_examples_to_features** pour convertir les celles-ci en features que l'on donne en entrée de BERT. <br/>
@@ -39,10 +39,14 @@ Le format des entrées est le suivant : <br/>
     - position du début de la réponse
     - position de la fin de la réponse
 
-- Pour BERT, nous avons utilisé l'architecture Fine-Tuned **BertForQuestionAnswering** de base avec des poids préentraînés 
+- Pour **BERT**, nous avons utilisé l'architecture Fine-Tuned **BertForQuestionAnswering** de base avec des poids préentraînés 
 
 
 ![bert-ft](https://user-images.githubusercontent.com/22484369/73930902-a3b5f180-48d7-11ea-8145-b8a79f439229.png)
+
+- Pour **XLNet**, il s'agit d'une architecture basée sur BERT qui est autoregressive:
+  - Dans la prédiction du mot masqué, on se sert du context en allant vers l'avant mais aussi en allant en arrière
+![xlnet](https://user-images.githubusercontent.com/22484369/73946549-63b23700-48f6-11ea-80b9-8d47030130b9.png)
 
 
 
