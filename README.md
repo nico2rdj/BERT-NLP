@@ -74,6 +74,9 @@ Une idée, assez peu utilisé mais qui peut s'averer pertinente est celle des LS
 
 On a voulu utiliser un CNN en sortie de Bert, plus précisément un CNN 1d, qui va prendre en entrée la concaténation des 4 dernières couches de Bert. Nous avons obtenu un score de ...% (en cours d'entrainement).
 
+![score](https://user-images.githubusercontent.com/22484369/73947807-61e97300-48f8-11ea-9721-82bc73722b32.png)
+
+
 ## License
 
 - [MIT](LICENSE)
